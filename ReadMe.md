@@ -195,19 +195,7 @@ This repository documents my Python learning journey through hands-on projects.
 
 Each project focuses on applying software engineering concepts rather than simply completing tutorials. The projects become progressively more advanced and lay the foundation for backend development, data engineering, and enterprise software.
 
----
 
-# 🛠 Future Tech Stack
-
-After completing these projects, the next learning roadmap is:
-
-- SQL
-- PostgreSQL
-- FastAPI
-- Docker
-- Data Engineering
-- AI
-- Cloud
 
 ---
 
