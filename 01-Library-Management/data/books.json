@@ -1,0 +1,23 @@
+[
+    {
+        "book_id": 1,
+        "title": "Python",
+        "author": "Guido",
+        "category": "Programming",
+        "available": true
+    },
+    {
+        "book_id": 2,
+        "title": "Clean Code",
+        "author": "Robert Martin",
+        "category": "Programming",
+        "available": true
+    },
+    {
+        "book_id": 12,
+        "title": "dad",
+        "author": "dadsd",
+        "category": "dadas",
+        "available": true
+    }
+]
