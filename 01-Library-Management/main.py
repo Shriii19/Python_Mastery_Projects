@@ -6,6 +6,16 @@ from student import Student
 library = Library()
 
 
+def get_int_input(prompt: str):
+    value = input(prompt).strip()
+
+    try:
+        return int(value)
+    except ValueError:
+        print("Please enter a valid number.")
+        return None
+
+
 while True:
 
     print("\n" + "=" * 40)
@@ -24,7 +34,10 @@ while True:
 
     if choice == "1":
 
-        book_id = int(input("Book ID: "))
+        book_id = get_int_input("Book ID: ")
+        if book_id is None:
+            continue
+
         title = input("Title: ")
         author = input("Author: ")
         category = input("Category: ")
@@ -44,12 +57,18 @@ while True:
 
     elif choice == "4":
 
-        book_id = int(input("Enter Book ID to delete: "))
+        book_id = get_int_input("Enter Book ID to delete: ")
+        if book_id is None:
+            continue
+
         library.delete_book(book_id)
 
     elif choice == "5":
 
-        student_id = int(input("Student ID: "))
+        student_id = get_int_input("Student ID: ")
+        if student_id is None:
+            continue
+
         name = input("Student Name: ")
         phone = input("Phone Number: ")
 
