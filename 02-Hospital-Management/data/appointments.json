@@ -1,1 +1,8 @@
-[]
+[
+    {
+        "appointment_id": 7001,
+        "patient_id": 9001,
+        "doctor_id": 8001,
+        "schedule": "2026-08-10 09:00"
+    }
+]
