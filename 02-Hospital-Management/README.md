@@ -152,19 +152,19 @@ python main.py
 
 # 📈 Development Roadmap
 
-- [ ] Project Setup
-- [ ] Patient Module
-- [ ] Doctor Module
-- [ ] Appointment Module
-- [ ] Hospital Module
-- [ ] JSON Storage
-- [ ] Search Functionality
-- [ ] Update Functionality
-- [ ] Delete Functionality
-- [ ] Reports
-- [ ] Logging
-- [ ] Testing
-- [ ] Final Improvements
+- [x] Project Setup
+- [x] Patient Module
+- [x] Doctor Module
+- [x] Appointment Module
+- [x] Hospital Module
+- [x] JSON Storage
+- [x] Search Functionality
+- [x] Update Functionality
+- [x] Delete Functionality
+- [x] Reports
+- [x] Logging
+- [x] Testing
+- [x] Final Improvements
 
 ---
 
@@ -187,7 +187,7 @@ This project is part of the **Python Mastery Projects** roadmap, where each proj
 Project Progress:
 
 - ✅ Project 01 — Library Management System
-- 🚧 Project 02 — Hospital Management System
+- ✅ Project 02 — Hospital Management System
 - ⏳ Project 03 — Banking System
 - ⏳ Project 04 — Inventory Management System
 - ⏳ Project 05 — CSV Data Analyzer
