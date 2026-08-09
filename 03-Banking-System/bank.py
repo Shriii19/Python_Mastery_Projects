@@ -66,6 +66,11 @@ class Bank:
         self.transactions.append(transaction)
         self._save_transactions()
 
+    def save_all(self) -> None:
+        self._save_customers()
+        self._save_accounts()
+        self._save_transactions()
+
     def get_customer(self, customer_id: int) -> Customer | None:
         for customer in self.customers:
             if customer.customer_id == customer_id:
