@@ -36,3 +36,27 @@ def test_bank_can_manage_entities(tmp_path):
     assert len(saved_customers) == 1
     assert len(saved_accounts) == 1
     assert len(saved_transactions) == 1
+
+
+def test_bank_can_save_and_reload_all_data(tmp_path):
+    bank = Bank(data_dir=str(tmp_path))
+    bank.add_customer(Customer(customer_id=2, name="Bob", phone="5555555555", email="bob@example.com"))
+    bank.add_account(Account(account_number="ACC-002", customer_id=2, account_type="Current", balance=250.0))
+    bank.add_transaction(
+        Transaction(
+            transaction_id="TXN-002",
+            transaction_type="withdraw",
+            account_number="ACC-002",
+            amount=25.0,
+            timestamp="2026-08-10 09:30:00",
+            description="ATM withdrawal",
+        )
+    )
+
+    bank.save_all()
+
+    reloaded_bank = Bank(data_dir=str(tmp_path))
+
+    assert reloaded_bank.get_customer(2).name == "Bob"
+    assert reloaded_bank.get_account("ACC-002").balance == 250.0
+    assert reloaded_bank.get_transaction("TXN-002").transaction_type == "withdraw"
