@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 from pathlib import Path
 
 from account import Account
@@ -65,6 +66,31 @@ class Bank:
     def add_transaction(self, transaction: Transaction) -> None:
         self.transactions.append(transaction)
         self._save_transactions()
+
+    def deposit(self, account_number: str, amount: float, description: str = "Cash deposit") -> Transaction:
+        if amount <= 0:
+            raise ValueError("Deposit amount must be greater than zero.")
+
+        account = self.get_account(account_number)
+        if account is None:
+            raise ValueError("Account not found.")
+        if not account.is_active:
+            raise ValueError("Account is inactive.")
+
+        account.balance += amount
+        transaction = Transaction(
+            transaction_id=f"TXN-{len(self.transactions) + 1:04d}",
+            transaction_type="deposit",
+            account_number=account_number,
+            amount=amount,
+            timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            description=description,
+        )
+
+        self.transactions.append(transaction)
+        self._save_accounts()
+        self._save_transactions()
+        return transaction
 
     def save_all(self) -> None:
         self._save_customers()
