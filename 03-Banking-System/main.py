@@ -32,6 +32,26 @@ def handle_deposit(bank: Bank) -> None:
         print(str(exc))
 
 
+def handle_withdraw(bank: Bank) -> None:
+    account_number = input("Enter account number: ").strip()
+    amount_input = input("Enter withdrawal amount: ").strip()
+
+    try:
+        amount = float(amount_input)
+    except ValueError:
+        print("Invalid amount. Please enter a numeric value.")
+        return
+
+    try:
+        transaction = bank.withdraw(account_number=account_number, amount=amount)
+        print(
+            f"Withdrawal successful. Transaction ID: {transaction.transaction_id}, "
+            f"Amount: {transaction.amount:.2f}"
+        )
+    except ValueError as exc:
+        print(str(exc))
+
+
 def main() -> None:
     bank = Bank()
     while True:
@@ -44,7 +64,9 @@ def main() -> None:
 
         if choice == "3":
             handle_deposit(bank)
-        elif choice in {"1", "2", "4", "5", "6"}:
+        elif choice == "4":
+            handle_withdraw(bank)
+        elif choice in {"1", "2", "5", "6"}:
             print(f"Selected option: {choice}")
         else:
             print("Invalid choice. Please try again.")
