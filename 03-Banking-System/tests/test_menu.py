@@ -1,7 +1,7 @@
 from account import Account
 from bank import Bank
 from customer import Customer
-from main import handle_deposit, show_menu
+from main import handle_deposit, handle_withdraw, show_menu
 
 
 def test_show_menu_displays_options(capsys):
@@ -30,3 +30,18 @@ def test_handle_deposit_updates_bank_data(tmp_path, monkeypatch, capsys):
 
     assert "Deposit successful" in captured.out
     assert bank.get_account("ACC-001").balance == 150.0
+
+
+def test_handle_withdraw_updates_bank_data(tmp_path, monkeypatch, capsys):
+    bank = Bank(data_dir=str(tmp_path))
+    bank.add_customer(Customer(customer_id=2, name="Bob", phone="5555555555", email="bob@example.com"))
+    bank.add_account(Account(account_number="ACC-002", customer_id=2, account_type="Checking", balance=200.0))
+
+    inputs = iter(["ACC-002", "75"])
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+
+    handle_withdraw(bank)
+    captured = capsys.readouterr()
+
+    assert "Withdrawal successful" in captured.out
+    assert bank.get_account("ACC-002").balance == 125.0
