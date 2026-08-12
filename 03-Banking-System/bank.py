@@ -92,6 +92,33 @@ class Bank:
         self._save_transactions()
         return transaction
 
+    def withdraw(self, account_number: str, amount: float, description: str = "Cash withdrawal") -> Transaction:
+        if amount <= 0:
+            raise ValueError("Withdrawal amount must be greater than zero.")
+
+        account = self.get_account(account_number)
+        if account is None:
+            raise ValueError("Account not found.")
+        if not account.is_active:
+            raise ValueError("Account is inactive.")
+        if account.balance < amount:
+            raise ValueError("Insufficient balance.")
+
+        account.balance -= amount
+        transaction = Transaction(
+            transaction_id=f"TXN-{len(self.transactions) + 1:04d}",
+            transaction_type="withdraw",
+            account_number=account_number,
+            amount=amount,
+            timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            description=description,
+        )
+
+        self.transactions.append(transaction)
+        self._save_accounts()
+        self._save_transactions()
+        return transaction
+
     def save_all(self) -> None:
         self._save_customers()
         self._save_accounts()
