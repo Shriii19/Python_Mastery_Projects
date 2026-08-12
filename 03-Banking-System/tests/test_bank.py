@@ -79,3 +79,22 @@ def test_deposit_updates_balance_and_creates_transaction(tmp_path):
     saved_transactions = json.loads(Path(tmp_path / "transactions.json").read_text())
     assert saved_accounts[0]["balance"] == 175.0
     assert saved_transactions[0]["transaction_type"] == "deposit"
+
+
+def test_withdraw_updates_balance_and_creates_transaction(tmp_path):
+    bank = Bank(data_dir=str(tmp_path))
+    bank.add_customer(Customer(customer_id=4, name="David", phone="2222222222", email="david@example.com"))
+    bank.add_account(Account(account_number="ACC-004", customer_id=4, account_type="Checking", balance=200.0))
+
+    transaction = bank.withdraw(account_number="ACC-004", amount=50.0)
+
+    updated_account = bank.get_account("ACC-004")
+    assert updated_account is not None
+    assert updated_account.balance == 150.0
+    assert transaction.transaction_type == "withdraw"
+    assert transaction.account_number == "ACC-004"
+
+    saved_accounts = json.loads(Path(tmp_path / "accounts.json").read_text())
+    saved_transactions = json.loads(Path(tmp_path / "transactions.json").read_text())
+    assert saved_accounts[0]["balance"] == 150.0
+    assert saved_transactions[0]["transaction_type"] == "withdraw"
