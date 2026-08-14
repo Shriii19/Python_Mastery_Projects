@@ -98,3 +98,28 @@ def test_withdraw_updates_balance_and_creates_transaction(tmp_path):
     saved_transactions = json.loads(Path(tmp_path / "transactions.json").read_text())
     assert saved_accounts[0]["balance"] == 150.0
     assert saved_transactions[0]["transaction_type"] == "withdraw"
+
+
+def test_transfer_moves_money_between_accounts_and_creates_transaction(tmp_path):
+    bank = Bank(data_dir=str(tmp_path))
+    bank.add_customer(Customer(customer_id=5, name="Eve", phone="3333333333", email="eve@example.com"))
+    bank.add_account(Account(account_number="ACC-005", customer_id=5, account_type="Savings", balance=300.0))
+    bank.add_account(Account(account_number="ACC-006", customer_id=5, account_type="Savings", balance=120.0))
+
+    transaction = bank.transfer(from_account_number="ACC-005", to_account_number="ACC-006", amount=80.0)
+
+    source_account = bank.get_account("ACC-005")
+    destination_account = bank.get_account("ACC-006")
+    assert source_account is not None
+    assert destination_account is not None
+    assert source_account.balance == 220.0
+    assert destination_account.balance == 200.0
+    assert transaction.transaction_type == "transfer"
+    assert transaction.account_number == "ACC-005"
+    assert "ACC-006" in transaction.description
+
+    saved_accounts = json.loads(Path(tmp_path / "accounts.json").read_text())
+    saved_transactions = json.loads(Path(tmp_path / "transactions.json").read_text())
+    assert saved_accounts[0]["balance"] == 220.0
+    assert saved_accounts[1]["balance"] == 200.0
+    assert saved_transactions[0]["transaction_type"] == "transfer"
