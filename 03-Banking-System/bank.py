@@ -119,6 +119,46 @@ class Bank:
         self._save_transactions()
         return transaction
 
+    def transfer(
+        self,
+        from_account_number: str,
+        to_account_number: str,
+        amount: float,
+        description: str = "Transfer",
+    ) -> Transaction:
+        if amount <= 0:
+            raise ValueError("Transfer amount must be greater than zero.")
+        if from_account_number == to_account_number:
+            raise ValueError("Source and destination accounts must be different.")
+
+        from_account = self.get_account(from_account_number)
+        to_account = self.get_account(to_account_number)
+        if from_account is None:
+            raise ValueError("Source account not found.")
+        if to_account is None:
+            raise ValueError("Destination account not found.")
+        if not from_account.is_active or not to_account.is_active:
+            raise ValueError("Both accounts must be active.")
+        if from_account.balance < amount:
+            raise ValueError("Insufficient balance in source account.")
+
+        from_account.balance -= amount
+        to_account.balance += amount
+
+        transaction = Transaction(
+            transaction_id=f"TXN-{len(self.transactions) + 1:04d}",
+            transaction_type="transfer",
+            account_number=from_account_number,
+            amount=amount,
+            timestamp=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            description=f"{description} to {to_account_number}",
+        )
+
+        self.transactions.append(transaction)
+        self._save_accounts()
+        self._save_transactions()
+        return transaction
+
     def save_all(self) -> None:
         self._save_customers()
         self._save_accounts()
