@@ -77,6 +77,23 @@ def handle_transfer(bank: Bank) -> None:
         print(str(exc))
 
 
+def handle_view_transactions(bank: Bank) -> None:
+    account_number = input("Enter account number: ").strip()
+    history = bank.get_transaction_history(account_number=account_number)
+
+    if not history:
+        print("No transactions found for this account.")
+        return
+
+    print("\nTransaction History")
+    print("-" * 60)
+    for transaction in history:
+        print(
+            f"{transaction.transaction_id} | {transaction.transaction_type} | "
+            f"{transaction.account_number} | {transaction.amount:.2f} | {transaction.timestamp}"
+        )
+
+
 def main() -> None:
     bank = Bank()
     while True:
@@ -93,7 +110,9 @@ def main() -> None:
             handle_withdraw(bank)
         elif choice == "5":
             handle_transfer(bank)
-        elif choice in {"1", "2", "6"}:
+        elif choice == "6":
+            handle_view_transactions(bank)
+        elif choice in {"1", "2"}:
             print(f"Selected option: {choice}")
         else:
             print("Invalid choice. Please try again.")
