@@ -181,3 +181,14 @@ class Bank:
             if transaction.transaction_id == transaction_id:
                 return transaction
         return None
+
+    def get_transaction_history(self, account_number: str) -> list[Transaction]:
+        account = self.get_account(account_number)
+        if account is None:
+            return []
+
+        return [
+            transaction
+            for transaction in self.transactions
+            if transaction.account_number == account_number or account_number in transaction.description
+        ]
