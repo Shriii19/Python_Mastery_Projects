@@ -123,3 +123,29 @@ def test_transfer_moves_money_between_accounts_and_creates_transaction(tmp_path)
     assert saved_accounts[0]["balance"] == 220.0
     assert saved_accounts[1]["balance"] == 200.0
     assert saved_transactions[0]["transaction_type"] == "transfer"
+
+
+def test_get_transaction_history_returns_account_transactions(tmp_path):
+    bank = Bank(data_dir=str(tmp_path))
+    bank.add_customer(Customer(customer_id=6, name="Frank", phone="7777777777", email="frank@example.com"))
+    bank.add_account(Account(account_number="ACC-007", customer_id=6, account_type="Savings", balance=400.0))
+    bank.add_account(Account(account_number="ACC-008", customer_id=6, account_type="Savings", balance=100.0))
+
+    bank.deposit(account_number="ACC-007", amount=50.0)
+    bank.withdraw(account_number="ACC-007", amount=25.0)
+    bank.transfer(from_account_number="ACC-007", to_account_number="ACC-008", amount=40.0)
+
+    history = bank.get_transaction_history(account_number="ACC-007")
+
+    assert len(history) == 3
+    assert history[0].transaction_type == "deposit"
+    assert history[1].transaction_type == "withdraw"
+    assert history[2].transaction_type == "transfer"
+
+
+def test_get_transaction_history_returns_empty_for_unknown_account(tmp_path):
+    bank = Bank(data_dir=str(tmp_path))
+
+    history = bank.get_transaction_history(account_number="ACC-UNKNOWN")
+
+    assert history == []
