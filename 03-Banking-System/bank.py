@@ -192,3 +192,20 @@ class Bank:
             for transaction in self.transactions
             if transaction.account_number == account_number or account_number in transaction.description
         ]
+
+    def get_report_summary(self) -> dict:
+        deposit_count = sum(1 for transaction in self.transactions if transaction.transaction_type == "deposit")
+        withdraw_count = sum(1 for transaction in self.transactions if transaction.transaction_type == "withdraw")
+        transfer_count = sum(1 for transaction in self.transactions if transaction.transaction_type == "transfer")
+
+        return {
+            "total_customers": len(self.customers),
+            "total_accounts": len(self.accounts),
+            "active_accounts": sum(1 for account in self.accounts if account.is_active),
+            "inactive_accounts": sum(1 for account in self.accounts if not account.is_active),
+            "total_balance": sum(account.balance for account in self.accounts),
+            "total_transactions": len(self.transactions),
+            "deposit_count": deposit_count,
+            "withdraw_count": withdraw_count,
+            "transfer_count": transfer_count,
+        }
