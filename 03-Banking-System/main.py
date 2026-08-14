@@ -9,7 +9,8 @@ def show_menu() -> None:
     print("4. Withdraw")
     print("5. Transfer")
     print("6. View Transactions")
-    print("7. Exit")
+    print("7. Reports")
+    print("8. Exit")
 
 
 def handle_deposit(bank: Bank) -> None:
@@ -94,13 +95,29 @@ def handle_view_transactions(bank: Bank) -> None:
         )
 
 
+def handle_reports(bank: Bank) -> None:
+    summary = bank.get_report_summary()
+
+    print("\nBank Reports")
+    print("-" * 60)
+    print(f"Total Customers   : {summary['total_customers']}")
+    print(f"Total Accounts    : {summary['total_accounts']}")
+    print(f"Active Accounts   : {summary['active_accounts']}")
+    print(f"Inactive Accounts : {summary['inactive_accounts']}")
+    print(f"Total Balance     : {summary['total_balance']:.2f}")
+    print(f"Total Transactions: {summary['total_transactions']}")
+    print(f"Deposits          : {summary['deposit_count']}")
+    print(f"Withdrawals       : {summary['withdraw_count']}")
+    print(f"Transfers         : {summary['transfer_count']}")
+
+
 def main() -> None:
     bank = Bank()
     while True:
         show_menu()
         choice = input("Enter your choice: ").strip()
 
-        if choice == "7":
+        if choice == "8":
             print("Goodbye!")
             break
 
@@ -112,6 +129,8 @@ def main() -> None:
             handle_transfer(bank)
         elif choice == "6":
             handle_view_transactions(bank)
+        elif choice == "7":
+            handle_reports(bank)
         elif choice in {"1", "2"}:
             print(f"Selected option: {choice}")
         else:
