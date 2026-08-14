@@ -1,7 +1,7 @@
 from account import Account
 from bank import Bank
 from customer import Customer
-from main import handle_deposit, handle_transfer, handle_view_transactions, handle_withdraw, show_menu
+from main import handle_deposit, handle_reports, handle_transfer, handle_view_transactions, handle_withdraw, show_menu
 
 
 def test_show_menu_displays_options(capsys):
@@ -14,7 +14,8 @@ def test_show_menu_displays_options(capsys):
     assert "4. Withdraw" in captured.out
     assert "5. Transfer" in captured.out
     assert "6. View Transactions" in captured.out
-    assert "7. Exit" in captured.out
+    assert "7. Reports" in captured.out
+    assert "8. Exit" in captured.out
 
 
 def test_handle_deposit_updates_bank_data(tmp_path, monkeypatch, capsys):
@@ -79,3 +80,20 @@ def test_handle_view_transactions_displays_history(tmp_path, monkeypatch, capsys
     assert "Transaction History" in captured.out
     assert "deposit" in captured.out
     assert "ACC-009" in captured.out
+
+
+def test_handle_reports_displays_summary(tmp_path, capsys):
+    bank = Bank(data_dir=str(tmp_path))
+    bank.add_customer(Customer(customer_id=5, name="Ellen", phone="1212121212", email="ellen@example.com"))
+    bank.add_account(Account(account_number="ACC-010", customer_id=5, account_type="Savings", balance=300.0))
+    bank.add_account(Account(account_number="ACC-011", customer_id=5, account_type="Current", balance=200.0))
+    bank.deposit(account_number="ACC-010", amount=25.0)
+
+    handle_reports(bank)
+    captured = capsys.readouterr()
+
+    assert "Bank Reports" in captured.out
+    assert "Total Customers" in captured.out
+    assert "Total Accounts" in captured.out
+    assert "Total Balance" in captured.out
+    assert "Deposits" in captured.out
