@@ -52,6 +52,31 @@ def handle_withdraw(bank: Bank) -> None:
         print(str(exc))
 
 
+def handle_transfer(bank: Bank) -> None:
+    from_account_number = input("Enter source account number: ").strip()
+    to_account_number = input("Enter destination account number: ").strip()
+    amount_input = input("Enter transfer amount: ").strip()
+
+    try:
+        amount = float(amount_input)
+    except ValueError:
+        print("Invalid amount. Please enter a numeric value.")
+        return
+
+    try:
+        transaction = bank.transfer(
+            from_account_number=from_account_number,
+            to_account_number=to_account_number,
+            amount=amount,
+        )
+        print(
+            f"Transfer successful. Transaction ID: {transaction.transaction_id}, "
+            f"Amount: {transaction.amount:.2f}"
+        )
+    except ValueError as exc:
+        print(str(exc))
+
+
 def main() -> None:
     bank = Bank()
     while True:
@@ -66,7 +91,9 @@ def main() -> None:
             handle_deposit(bank)
         elif choice == "4":
             handle_withdraw(bank)
-        elif choice in {"1", "2", "5", "6"}:
+        elif choice == "5":
+            handle_transfer(bank)
+        elif choice in {"1", "2", "6"}:
             print(f"Selected option: {choice}")
         else:
             print("Invalid choice. Please try again.")
