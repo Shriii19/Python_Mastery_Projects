@@ -5,7 +5,8 @@ from pathlib import Path
 from account import Account
 from customer import Customer
 from transaction import Transaction
-from config import ACCOUNT_FILE, CUSTOMER_FILE, TRANSACTION_FILE
+from logger import log
+
 
 
 class Bank:
@@ -58,14 +59,17 @@ class Bank:
     def add_customer(self, customer: Customer) -> None:
         self.customers.append(customer)
         self._save_customers()
+        log(f"Customer created: {customer.customer_id} - {customer.name}")
 
     def add_account(self, account: Account) -> None:
         self.accounts.append(account)
         self._save_accounts()
+        log(f"Account created: {account.account_number} for customer {account.customer_id}")
 
     def add_transaction(self, transaction: Transaction) -> None:
         self.transactions.append(transaction)
         self._save_transactions()
+        log(f"Transaction recorded: {transaction.transaction_id} - {transaction.transaction_type}")
 
     def deposit(self, account_number: str, amount: float, description: str = "Cash deposit") -> Transaction:
         if amount <= 0:
@@ -90,6 +94,7 @@ class Bank:
         self.transactions.append(transaction)
         self._save_accounts()
         self._save_transactions()
+        log(f"Deposit successful: {account_number} amount {amount:.2f}")
         return transaction
 
     def withdraw(self, account_number: str, amount: float, description: str = "Cash withdrawal") -> Transaction:
@@ -117,6 +122,7 @@ class Bank:
         self.transactions.append(transaction)
         self._save_accounts()
         self._save_transactions()
+        log(f"Withdrawal successful: {account_number} amount {amount:.2f}")
         return transaction
 
     def transfer(
@@ -157,6 +163,7 @@ class Bank:
         self.transactions.append(transaction)
         self._save_accounts()
         self._save_transactions()
+        log(f"Transfer successful: {from_account_number} -> {to_account_number} amount {amount:.2f}")
         return transaction
 
     def save_all(self) -> None:
