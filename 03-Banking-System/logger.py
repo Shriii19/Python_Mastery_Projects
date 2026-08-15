@@ -5,12 +5,16 @@ from config import LOG_FILE
 
 Path(LOG_FILE).parent.mkdir(parents=True, exist_ok=True)
 
-logging.basicConfig(
-    filename=LOG_FILE,
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-)
+logger = logging.getLogger("banking_system")
+logger.setLevel(logging.INFO)
+logger.propagate = False
+
+if not logger.handlers:
+    file_handler = logging.FileHandler(LOG_FILE)
+    file_handler.setLevel(logging.INFO)
+    file_handler.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
+    logger.addHandler(file_handler)
 
 
 def log(message: str) -> None:
-    logging.info(message)
+    logger.info(message)
