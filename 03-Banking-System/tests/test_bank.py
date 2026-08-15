@@ -5,6 +5,7 @@ from bank import Bank
 from customer import Customer
 from account import Account
 from transaction import Transaction
+from config import LOG_FILE
 
 
 def test_bank_can_manage_entities(tmp_path):
@@ -149,3 +150,17 @@ def test_get_transaction_history_returns_empty_for_unknown_account(tmp_path):
     history = bank.get_transaction_history(account_number="ACC-UNKNOWN")
 
     assert history == []
+
+
+def test_deposit_logs_action(tmp_path):
+    bank = Bank(data_dir=str(tmp_path))
+    bank.add_customer(Customer(customer_id=7, name="Grace", phone="8888888888", email="grace@example.com"))
+    bank.add_account(Account(account_number="ACC-012", customer_id=7, account_type="Savings", balance=50.0))
+
+    bank.deposit(account_number="ACC-012", amount=10.0)
+
+    log_path = Path(LOG_FILE)
+    assert log_path.exists()
+    contents = log_path.read_text(encoding="utf-8")
+    assert "deposit" in contents.lower()
+    assert "ACC-012" in contents
