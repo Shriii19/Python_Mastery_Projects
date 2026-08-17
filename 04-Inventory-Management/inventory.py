@@ -62,6 +62,10 @@ class Inventory:
         self._save_transactions()
 
     def add_product(self, product: Product) -> None:
+        for existing_product in self.products:
+            if existing_product.product_id == product.product_id:
+                raise ValueError("Product already exists.")
+
         self.products.append(product)
         self._save_products()
         log(f"Product added: {product.product_id} - {product.name}")
