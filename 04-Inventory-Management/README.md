@@ -471,10 +471,6 @@ Docker
 Cloud Deployment
 ```
 
-These upgrades are intentionally **not part of the current project**.
-
-The current objective is to understand the Python implementation first.
-
 ---
 
 # 📌 Project Status
