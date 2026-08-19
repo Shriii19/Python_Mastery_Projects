@@ -36,3 +36,9 @@ def test_add_product_rejects_duplicate_and_persists(tmp_path):
 
     with pytest.raises(ValueError, match="Product already exists"):
         inventory.add_product(duplicate)
+
+
+def test_get_product_returns_none_for_unknown_product(tmp_path):
+    inventory = Inventory(data_dir=str(tmp_path))
+
+    assert inventory.get_product("P-UNKNOWN") is None
