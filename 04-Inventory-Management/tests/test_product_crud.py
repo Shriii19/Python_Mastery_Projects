@@ -82,3 +82,52 @@ def test_update_product_raises_error_if_not_found(tmp_path):
 
     with pytest.raises(ValueError, match="Product not found"):
         inventory.update_product("P-UNKNOWN", name="New Name")
+
+
+def test_delete_product_removes_from_inventory(tmp_path):
+    inventory = Inventory(data_dir=str(tmp_path))
+
+    product = Product(
+        product_id="P-001",
+        name="Wireless Mouse",
+        category="Accessories",
+        price=25.5,
+        stock_quantity=20,
+        supplier_id="S-001",
+        reorder_level=5,
+    )
+
+    inventory.add_product(product)
+    assert inventory.get_product("P-001") is not None
+
+    inventory.delete_product("P-001")
+    assert inventory.get_product("P-001") is None
+    assert len(inventory.products) == 0
+
+
+def test_delete_product_persists_to_disk(tmp_path):
+    inventory = Inventory(data_dir=str(tmp_path))
+
+    product = Product(
+        product_id="P-001",
+        name="Wireless Mouse",
+        category="Accessories",
+        price=25.5,
+        stock_quantity=20,
+        supplier_id="S-001",
+        reorder_level=5,
+    )
+
+    inventory.add_product(product)
+    inventory.delete_product("P-001")
+
+    reloaded = Inventory(data_dir=str(tmp_path))
+    assert reloaded.get_product("P-001") is None
+    assert len(reloaded.products) == 0
+
+
+def test_delete_product_raises_error_if_not_found(tmp_path):
+    inventory = Inventory(data_dir=str(tmp_path))
+
+    with pytest.raises(ValueError, match="Product not found"):
+        inventory.delete_product("P-UNKNOWN")
