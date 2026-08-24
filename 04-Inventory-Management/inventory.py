@@ -86,6 +86,27 @@ class Inventory:
                 return product
         return None
 
+    def update_product(self, product_id: str, **kwargs) -> None:
+        product = self.get_product(product_id)
+        if product is None:
+            raise ValueError("Product not found.")
+
+        if "name" in kwargs:
+            product.name = str(kwargs["name"])
+        if "category" in kwargs:
+            product.category = str(kwargs["category"])
+        if "price" in kwargs:
+            product.price = float(kwargs["price"])
+        if "stock_quantity" in kwargs:
+            product.stock_quantity = int(kwargs["stock_quantity"])
+        if "supplier_id" in kwargs:
+            product.supplier_id = kwargs["supplier_id"]
+        if "reorder_level" in kwargs:
+            product.reorder_level = int(kwargs["reorder_level"])
+
+        self._save_products()
+        log(f"Product updated: {product_id}")
+
     def get_supplier(self, supplier_id: str) -> Supplier | None:
         for supplier in self.suppliers:
             if supplier.supplier_id == supplier_id:
