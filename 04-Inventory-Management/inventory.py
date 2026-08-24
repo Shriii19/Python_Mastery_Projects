@@ -107,6 +107,15 @@ class Inventory:
         self._save_products()
         log(f"Product updated: {product_id}")
 
+    def delete_product(self, product_id: str) -> None:
+        product = self.get_product(product_id)
+        if product is None:
+            raise ValueError("Product not found.")
+
+        self.products = [p for p in self.products if p.product_id != product_id]
+        self._save_products()
+        log(f"Product deleted: {product_id}")
+
     def get_supplier(self, supplier_id: str) -> Supplier | None:
         for supplier in self.suppliers:
             if supplier.supplier_id == supplier_id:
