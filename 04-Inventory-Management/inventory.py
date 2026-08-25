@@ -71,6 +71,10 @@ class Inventory:
         log(f"Product added: {product.product_id} - {product.name}")
 
     def add_supplier(self, supplier: Supplier) -> None:
+        for existing_supplier in self.suppliers:
+            if existing_supplier.supplier_id == supplier.supplier_id:
+                raise ValueError("Supplier already exists.")
+
         self.suppliers.append(supplier)
         self._save_suppliers()
         log(f"Supplier added: {supplier.supplier_id} - {supplier.name}")
@@ -121,6 +125,32 @@ class Inventory:
             if supplier.supplier_id == supplier_id:
                 return supplier
         return None
+
+    def update_supplier(self, supplier_id: str, **kwargs) -> None:
+        supplier = self.get_supplier(supplier_id)
+        if supplier is None:
+            raise ValueError("Supplier not found.")
+
+        if "name" in kwargs:
+            supplier.name = str(kwargs["name"])
+        if "phone" in kwargs:
+            supplier.phone = str(kwargs["phone"])
+        if "email" in kwargs:
+            supplier.email = str(kwargs["email"])
+        if "address" in kwargs:
+            supplier.address = str(kwargs["address"])
+
+        self._save_suppliers()
+        log(f"Supplier updated: {supplier_id}")
+
+    def delete_supplier(self, supplier_id: str) -> None:
+        supplier = self.get_supplier(supplier_id)
+        if supplier is None:
+            raise ValueError("Supplier not found.")
+
+        self.suppliers = [s for s in self.suppliers if s.supplier_id != supplier_id]
+        self._save_suppliers()
+        log(f"Supplier deleted: {supplier_id}")
 
     def add_stock(self, product_id: str, quantity: int, supplier_id: str | None = None, description: str = "Stock received") -> InventoryTransaction:
         if quantity <= 0:
