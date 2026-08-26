@@ -2,7 +2,6 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-from config import PRODUCTS_FILE, SUPPLIERS_FILE, TRANSACTIONS_FILE
 from inventory_transaction import InventoryTransaction
 from logger import log
 from product import Product
@@ -95,18 +94,32 @@ class Inventory:
         if product is None:
             raise ValueError("Product not found.")
 
+        supported_fields = {"name", "category", "price", "stock_quantity", "supplier_id", "reorder_level"}
+        unknown_fields = set(kwargs) - supported_fields
+        if unknown_fields:
+            raise ValueError(f"Unsupported product fields: {', '.join(sorted(unknown_fields))}.")
+
         if "name" in kwargs:
             product.name = str(kwargs["name"])
         if "category" in kwargs:
             product.category = str(kwargs["category"])
         if "price" in kwargs:
-            product.price = float(kwargs["price"])
+            price = float(kwargs["price"])
+            if price < 0:
+                raise ValueError("Price cannot be negative.")
+            product.price = price
         if "stock_quantity" in kwargs:
-            product.stock_quantity = int(kwargs["stock_quantity"])
+            stock_quantity = int(kwargs["stock_quantity"])
+            if stock_quantity < 0:
+                raise ValueError("Stock quantity cannot be negative.")
+            product.stock_quantity = stock_quantity
         if "supplier_id" in kwargs:
             product.supplier_id = kwargs["supplier_id"]
         if "reorder_level" in kwargs:
-            product.reorder_level = int(kwargs["reorder_level"])
+            reorder_level = int(kwargs["reorder_level"])
+            if reorder_level < 0:
+                raise ValueError("Reorder level cannot be negative.")
+            product.reorder_level = reorder_level
 
         self._save_products()
         log(f"Product updated: {product_id}")
