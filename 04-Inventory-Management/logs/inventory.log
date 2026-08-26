@@ -60,3 +60,78 @@
 2026-08-26 20:46:02,052 - INFO - Supplier updated: S-001
 2026-08-26 20:46:02,068 - INFO - Supplier added: S-001 - Tech Supply Co.
 2026-08-26 20:46:02,069 - INFO - Supplier deleted: S-001
+2026-08-26 20:47:53,322 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-26 20:47:53,332 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-26 20:47:53,333 - INFO - Product updated: P-001
+2026-08-26 20:47:53,340 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-26 20:47:53,340 - INFO - Product deleted: P-001
+2026-08-26 20:47:53,344 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-26 20:47:53,344 - INFO - Product deleted: P-001
+2026-08-26 20:47:53,351 - INFO - Product added: P-001 - Keyboard
+2026-08-26 20:47:53,352 - INFO - Stock added: P-001 quantity 5
+2026-08-26 20:47:53,353 - INFO - Product sold: P-001 quantity 3
+2026-08-26 20:47:56,750 - INFO - Product added: P-001 - Keyboard
+2026-08-26 20:47:56,757 - INFO - Product added: P-002 - Mouse
+2026-08-26 20:47:56,759 - INFO - inventory test message
+2026-08-26 20:47:56,780 - INFO - Product added: P-001 - Keyboard
+2026-08-26 20:47:56,781 - INFO - Product added: P-002 - Monitor
+2026-08-26 20:47:56,782 - INFO - Product added: P-003 - Mouse
+2026-08-26 20:47:56,790 - INFO - Product added: P-001 - Keyboard
+2026-08-26 20:47:56,791 - INFO - Stock added: P-001 quantity 5
+2026-08-26 20:47:56,792 - INFO - Product sold: P-001 quantity 3
+2026-08-26 20:47:56,797 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-26 20:47:56,805 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-26 20:47:56,805 - INFO - Product updated: P-001
+2026-08-26 20:47:56,814 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-26 20:47:56,815 - INFO - Product deleted: P-001
+2026-08-26 20:47:56,819 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-26 20:47:56,819 - INFO - Product deleted: P-001
+2026-08-26 20:47:56,827 - INFO - Supplier added: S-001 - Tech Supply Co.
+2026-08-26 20:47:56,827 - INFO - Supplier added: S-002 - Office Goods
+2026-08-26 20:47:56,828 - INFO - Product added: P-001 - Keyboard
+2026-08-26 20:47:56,828 - INFO - Product added: P-002 - Monitor
+2026-08-26 20:47:56,831 - INFO - Product added: P-001 - Keyboard
+2026-08-26 20:47:56,832 - INFO - Stock added: P-001 quantity 8
+2026-08-26 20:47:56,838 - INFO - Product added: P-002 - Monitor
+2026-08-26 20:47:56,839 - INFO - Product sold: P-002 quantity 3
+2026-08-26 20:47:56,844 - INFO - Product added: P-003 - Mouse
+2026-08-26 20:47:56,849 - INFO - Product added: P-004 - Laptop Stand
+2026-08-26 20:47:56,853 - INFO - Supplier added: S-001 - Tech Supply Co.
+2026-08-26 20:47:56,897 - INFO - Supplier added: S-001 - Tech Supply Co.
+2026-08-26 20:47:56,898 - INFO - Supplier updated: S-001
+2026-08-26 20:47:56,932 - INFO - Supplier added: S-001 - Tech Supply Co.
+2026-08-26 20:47:56,932 - INFO - Supplier deleted: S-001
+2026-08-26 20:48:26,513 - INFO - Product added: P-001 - Keyboard
+2026-08-26 20:48:26,514 - INFO - Stock added: P-001 quantity 5
+2026-08-26 20:48:26,514 - INFO - Product sold: P-001 quantity 3
+2026-08-26 20:48:31,122 - INFO - Product added: P-001 - Keyboard
+2026-08-26 20:48:31,130 - INFO - Product added: P-002 - Mouse
+2026-08-26 20:48:31,132 - INFO - inventory test message
+2026-08-26 20:48:31,154 - INFO - Product added: P-001 - Keyboard
+2026-08-26 20:48:31,154 - INFO - Product added: P-002 - Monitor
+2026-08-26 20:48:31,155 - INFO - Product added: P-003 - Mouse
+2026-08-26 20:48:31,161 - INFO - Product added: P-001 - Keyboard
+2026-08-26 20:48:31,162 - INFO - Stock added: P-001 quantity 5
+2026-08-26 20:48:31,166 - INFO - Product sold: P-001 quantity 3
+2026-08-26 20:48:31,171 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-26 20:48:31,183 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-26 20:48:31,183 - INFO - Product updated: P-001
+2026-08-26 20:48:31,194 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-26 20:48:31,194 - INFO - Product deleted: P-001
+2026-08-26 20:48:31,197 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-26 20:48:31,198 - INFO - Product deleted: P-001
+2026-08-26 20:48:31,203 - INFO - Supplier added: S-001 - Tech Supply Co.
+2026-08-26 20:48:31,203 - INFO - Supplier added: S-002 - Office Goods
+2026-08-26 20:48:31,204 - INFO - Product added: P-001 - Keyboard
+2026-08-26 20:48:31,204 - INFO - Product added: P-002 - Monitor
+2026-08-26 20:48:31,208 - INFO - Product added: P-001 - Keyboard
+2026-08-26 20:48:31,209 - INFO - Stock added: P-001 quantity 8
+2026-08-26 20:48:31,213 - INFO - Product added: P-002 - Monitor
+2026-08-26 20:48:31,214 - INFO - Product sold: P-002 quantity 3
+2026-08-26 20:48:31,218 - INFO - Product added: P-003 - Mouse
+2026-08-26 20:48:31,226 - INFO - Product added: P-004 - Laptop Stand
+2026-08-26 20:48:31,231 - INFO - Supplier added: S-001 - Tech Supply Co.
+2026-08-26 20:48:31,239 - INFO - Supplier added: S-001 - Tech Supply Co.
+2026-08-26 20:48:31,239 - INFO - Supplier updated: S-001
+2026-08-26 20:48:31,248 - INFO - Supplier added: S-001 - Tech Supply Co.
+2026-08-26 20:48:31,249 - INFO - Supplier deleted: S-001
