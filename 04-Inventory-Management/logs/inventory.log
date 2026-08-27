@@ -135,3 +135,34 @@
 2026-08-26 20:48:31,239 - INFO - Supplier updated: S-001
 2026-08-26 20:48:31,248 - INFO - Supplier added: S-001 - Tech Supply Co.
 2026-08-26 20:48:31,249 - INFO - Supplier deleted: S-001
+2026-08-27 23:13:24,670 - INFO - Product added: P-001 - Keyboard
+2026-08-27 23:13:24,679 - INFO - Product added: P-002 - Mouse
+2026-08-27 23:13:24,680 - INFO - inventory test message
+2026-08-27 23:13:24,693 - INFO - Product added: P-001 - Keyboard
+2026-08-27 23:13:24,694 - INFO - Product added: P-002 - Monitor
+2026-08-27 23:13:24,694 - INFO - Product added: P-003 - Mouse
+2026-08-27 23:13:24,701 - INFO - Product added: P-001 - Keyboard
+2026-08-27 23:13:24,702 - INFO - Stock added: P-001 quantity 5
+2026-08-27 23:13:24,703 - INFO - Product sold: P-001 quantity 3
+2026-08-27 23:13:24,708 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-27 23:13:24,718 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-27 23:13:24,719 - INFO - Product updated: P-001
+2026-08-27 23:13:24,732 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-27 23:13:24,733 - INFO - Product deleted: P-001
+2026-08-27 23:13:24,740 - INFO - Product added: P-001 - Wireless Mouse
+2026-08-27 23:13:24,741 - INFO - Product deleted: P-001
+2026-08-27 23:13:24,751 - INFO - Supplier added: S-001 - Tech Supply Co.
+2026-08-27 23:13:24,751 - INFO - Supplier added: S-002 - Office Goods
+2026-08-27 23:13:24,752 - INFO - Product added: P-001 - Keyboard
+2026-08-27 23:13:24,753 - INFO - Product added: P-002 - Monitor
+2026-08-27 23:13:24,758 - INFO - Product added: P-001 - Keyboard
+2026-08-27 23:13:24,760 - INFO - Stock added: P-001 quantity 8
+2026-08-27 23:13:24,765 - INFO - Product added: P-002 - Monitor
+2026-08-27 23:13:24,767 - INFO - Product sold: P-002 quantity 3
+2026-08-27 23:13:24,771 - INFO - Product added: P-003 - Mouse
+2026-08-27 23:13:24,776 - INFO - Product added: P-004 - Laptop Stand
+2026-08-27 23:13:24,780 - INFO - Supplier added: S-001 - Tech Supply Co.
+2026-08-27 23:13:24,790 - INFO - Supplier added: S-001 - Tech Supply Co.
+2026-08-27 23:13:24,790 - INFO - Supplier updated: S-001
+2026-08-27 23:13:24,799 - INFO - Supplier added: S-001 - Tech Supply Co.
+2026-08-27 23:13:24,799 - INFO - Supplier deleted: S-001
