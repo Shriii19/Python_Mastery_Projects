@@ -135,4 +135,4 @@ After completing this project, you will be able to use Pandas to analyze a small
 
 ## Project Status
 
-In Development. The repository currently contains only the project setup and sample dataset; no application logic has been implemented
+In Development. The repository currently contains only the project setup and sample dataset; no application logic has been implemented.
