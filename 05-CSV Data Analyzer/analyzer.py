@@ -1,5 +1,6 @@
 from pathlib import Path
 from typing import Any
+from io import StringIO
 
 import pandas as pd
 
@@ -66,8 +67,9 @@ class EmployeeAnalyzer:
 		return self._require_data().dtypes
 
 	def dataset_info(self) -> str:
-		info = self._require_data().info(buf=None)
-		return str(info)
+		output = StringIO()
+		self._require_data().info(buf=output)
+		return output.getvalue()
 
 	def filter_data(self, department: str | None = None, salary_gt: float | None = None,
 					salary_lt: float | None = None, age_gt: float | None = None,
