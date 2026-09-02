@@ -1,0 +1,12 @@
+================================
+EMPLOYEE SUMMARY
+================================
+
+Total Employees : 11
+Average Salary  : 71,500.00
+Total Salary    : 715,000.00
+Highest Salary  : 82,000.00
+Lowest Salary   : 59,000.00
+Average Age     : 34.4
+Minimum Age     : 26.0
+Maximum Age     : 45.0

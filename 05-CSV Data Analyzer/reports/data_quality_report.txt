@@ -1,0 +1,12 @@
+================================
+DATA QUALITY REPORT
+================================
+
+Missing Values:
+id            0
+name          0
+department    0
+age           0
+salary        1
+
+Duplicate Rows: 1 duplicate row(s) found

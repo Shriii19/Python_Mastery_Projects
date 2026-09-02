@@ -1,0 +1,9 @@
+================================
+DEPARTMENT ANALYSIS
+================================
+
+Finance: 3 employees, average salary 80,000.00, total salary 240,000.00
+HR: 2 employees, average salary 59,000.00, total salary 59,000.00
+IT: 2 employees, average salary 75,000.00, total salary 150,000.00
+Marketing: 2 employees, average salary 63,000.00, total salary 126,000.00
+Sales: 2 employees, average salary 70,000.00, total salary 140,000.00
