@@ -1,89 +1,54 @@
-# CSV Data Analyzer
+# Project 05: CSV Data Analyzer
 
-**Status:** In Development
+**Status: 🟡 In Development**
 
-## Project Purpose
+## Description
 
-CSV Data Analyzer is a beginner-friendly local Python project for exploring employee data stored in a CSV file. It will demonstrate how to load, inspect, filter, sort, summarize, clean, and report on small datasets.
+A local console application that loads employee data from CSV, analyzes it with Pandas, identifies data-quality problems, and writes readable text reports. It uses no web server, database, API, or cloud service.
 
-The project focuses on learning data analysis concepts with a simple dataset, not processing large volumes of data or connecting to external services.
+## Goals and Features
 
-## What the Application Will Do
+- Inspect complete data, head/tail records, shape, columns, types, and dataset info.
+- Filter by department, salary, and age; sort by name, age, salary, or department.
+- Calculate employee count, salary totals and ranges, and age averages and ranges.
+- Group employees by department with counts and salary summaries.
+- Detect missing values and duplicate rows.
+- Create a cleaned in-memory DataFrame without changing the source CSV.
+- Generate summary, department, and data-quality reports in `reports/`.
+- Handle missing files, malformed CSV files, invalid columns, and invalid menu input.
 
-The completed application will load an employee CSV file, analyze its contents, allow filtering and sorting, calculate useful statistics, and generate reports.
+## Dataset and Workflow
 
-## Example Dataset
-
-The included `data/employees.csv` file contains a small employee dataset with these columns:
-
-- `id`
-- `name`
-- `department`
-- `age`
-- `salary`
-
-The initial data is complete and has no duplicate rows. Missing and duplicate values will be introduced later while learning data cleaning.
-
-## Planned Features
-
-- Load CSV data
-- View records and dataset information
-- Search and filter records
-- Sort records
-- Calculate statistics
-- Group records by department
-- Detect missing values
-- Detect duplicate records
-- Clean data
-- Generate reports
-
-These features are planned and are not implemented yet.
-
-## Basic Workflow
+`data/employees.csv` contains employee `id`, `name`, `department`, `age`, and `salary` columns. It has 10 unique employee records plus one duplicate row, and one missing salary to make quality checks meaningful.
 
 ```text
-CSV file
-    -> Load data
-    -> Analyze data
-    -> Filter or sort
-    -> Calculate statistics
-    -> Generate reports
+CSV -> EmployeeAnalyzer -> inspect/filter/sort/analyze/clean -> ReportGenerator -> reports/
 ```
 
 ## Project Structure
 
 ```text
 05-CSV-Data-Analyzer/
-|
-|-- data/
-|   `-- employees.csv
-|
+|-- data/employees.csv
 |-- reports/
-|
-|-- tests/
-|
-|-- analyzer.py
-|-- report.py
-|-- config.py
-|-- logger.py
-|-- main.py
-|
-|-- README.md
+|-- tests/test_analyzer.py
+|-- analyzer.py       # Data loading and analysis
+|-- report.py         # Text report generation
+|-- config.py         # Project paths
+|-- logger.py         # Application logging
+|-- main.py           # Console menu
 |-- requirements.txt
-`-- .gitignore
+|-- .gitignore
+`-- README.md
 ```
 
-## Technologies
+## Technologies and Installation
 
-- Python
+- Python 3
 - Pandas
-- CSV files
-- Python Standard Library
+- CSV and the Python standard library
 
-## Installation
-
-1. Create and activate a virtual environment.
-2. Install the project dependency:
+Create a virtual environment if desired, activate it, and install the only external dependency:
 
 ```bash
 pip install -r requirements.txt
@@ -91,48 +56,39 @@ pip install -r requirements.txt
 
 ## How to Run
 
-The application entry point will be `main.py`. A runnable application will be added in a later development step.
+From this directory:
 
-## Concepts You Will Practice
+```bash
+python main.py
+```
 
-### Python Concepts
+Choose `5` for statistics, `7` for quality checks, `8` for an in-memory cleaned view, or `9` to generate all reports.
 
-- Modules and imports
-- Functions and classes
-- File paths
-- Exception handling
-- Logging
-- Testing
+Run the tests with the standard library:
 
-### Pandas Concepts
+```bash
+python -m unittest discover -s tests -v
+```
 
-- Reading CSV files
-- Inspecting DataFrames
-- Filtering and sorting data
-- Descriptive statistics
-- Grouping data
-- Missing-value and duplicate detection
-- Exporting reports
+## Concepts Practiced
 
-### Software Engineering Concepts
+**Python:** modules, classes, type hints, pathlib, exceptions, logging, and unittest.
 
-- Organizing a project into focused modules
-- Separating analysis, reporting, configuration, and user-interface responsibilities
-- Keeping sample data separate from source code
-- Writing tests as features are implemented
+**Pandas:** DataFrames, `read_csv`, selection, boolean filtering, sorting, aggregation, `groupby`, missing-value detection, duplicate detection, and type conversion.
+
+**Software engineering:** separation of concerns, configuration, non-destructive cleaning, validation, reporting, and automated tests.
 
 ## Development Roadmap
 
-1. Set up the project structure and sample data.
-2. Load and display CSV data.
-3. Add filtering, sorting, and statistics.
-4. Add data-quality checks and cleaning.
-5. Add report generation and tests.
+1. Add optional CSV export for cleaned data.
+2. Add configurable report formats such as Markdown or CSV.
+3. Add more reusable command-line arguments while preserving the interactive menu.
+4. Expand validation for numeric ranges and duplicate IDs.
 
 ## Learning Outcomes
 
-After completing this project, you will be able to use Pandas to analyze a small CSV dataset, organize a Python data-analysis project, and create basic data reports.
+You will be able to build a small, maintainable Pandas application; reason about data quality; produce repeatable reports; and test analysis behavior independently from user interaction.
 
-## Project Status
+## Future Improvements and Project Status
 
-In Development. The repository currently contains only the project setup and sample dataset; no application logic has been implemented
+Possible extensions include charts, configurable input files, richer validation, and additional report formats. The current implementation is complete for the roadmap requirements and remains **🟡 In Development** as a learning project.
