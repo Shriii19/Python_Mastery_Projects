@@ -210,3 +210,163 @@
 2026-09-03 18:45:06,722 - INFO - Cleaned data created with 5 records.
 2026-09-03 18:45:06,734 - INFO - Loaded 3 employee records.
 2026-09-03 18:45:06,737 - INFO - Cleaned data created with 3 records.
+2026-09-04 22:05:59,808 - INFO - Loaded 11 employee records.
+2026-09-04 22:05:59,813 - INFO - Loaded 11 employee records.
+2026-09-04 22:05:59,851 - INFO - Loaded 11 employee records.
+2026-09-04 22:05:59,853 - INFO - Employee data filtered.
+2026-09-04 22:05:59,857 - INFO - Loaded 11 employee records.
+2026-09-04 22:05:59,871 - INFO - Department analysis calculated.
+2026-09-04 22:05:59,876 - INFO - Loaded 11 employee records.
+2026-09-04 22:05:59,878 - INFO - Employee data sorted by salary.
+2026-09-04 22:05:59,883 - INFO - Loaded 11 employee records.
+2026-09-04 22:05:59,884 - INFO - Employee statistics calculated.
+2026-09-04 22:06:57,375 - INFO - Loaded 11 employee records.
+2026-09-04 22:06:57,398 - INFO - Employee statistics calculated.
+2026-09-04 22:06:57,402 - INFO - Department analysis calculated.
+2026-09-04 22:06:57,411 - INFO - Cleaned data created with 10 records.
+2026-09-04 22:06:57,417 - INFO - CSV file not found: C:\Users\mudab\AppData\Local\Temp\csv-gap-9kh1s6zi\x.csv
+2026-09-04 22:06:57,418 - INFO - CSV file not found: C:\Users\mudab\AppData\Local\Temp\csv-gap-9kh1s6zi\x.csv
+2026-09-04 22:06:57,418 - INFO - CSV file not found: C:\Users\mudab\AppData\Local\Temp\csv-gap-9kh1s6zi\x.csv
+2026-09-04 22:06:57,418 - INFO - CSV file not found: C:\Users\mudab\AppData\Local\Temp\csv-gap-9kh1s6zi\x.csv
+2026-09-04 22:06:57,418 - INFO - CSV file not found: C:\Users\mudab\AppData\Local\Temp\csv-gap-9kh1s6zi\x.csv
+2026-09-04 22:06:57,420 - INFO - CSV file is empty.
+2026-09-04 22:06:57,420 - INFO - CSV file is empty.
+2026-09-04 22:06:57,421 - INFO - CSV file is empty.
+2026-09-04 22:06:57,421 - INFO - CSV file is empty.
+2026-09-04 22:06:57,421 - INFO - CSV file is empty.
+2026-09-04 22:06:57,435 - INFO - Invalid CSV: Error tokenizing data. C error: EOF inside string starting at row 2
+2026-09-04 22:06:57,435 - INFO - Invalid CSV: Error tokenizing data. C error: EOF inside string starting at row 2
+2026-09-04 22:06:57,436 - INFO - Invalid CSV: Error tokenizing data. C error: EOF inside string starting at row 2
+2026-09-04 22:06:57,436 - INFO - Invalid CSV: Error tokenizing data. C error: EOF inside string starting at row 2
+2026-09-04 22:06:57,436 - INFO - Invalid CSV: Error tokenizing data. C error: EOF inside string starting at row 2
+2026-09-04 22:06:57,450 - INFO - CSV is missing required columns: id, department.
+2026-09-04 22:06:57,451 - INFO - CSV is missing required columns: id, department.
+2026-09-04 22:06:57,452 - INFO - CSV is missing required columns: id, department.
+2026-09-04 22:06:57,452 - INFO - CSV is missing required columns: id, department.
+2026-09-04 22:06:57,453 - INFO - CSV is missing required columns: id, department.
+2026-09-04 22:06:57,469 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,470 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,471 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,472 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,472 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,483 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,484 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,485 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,486 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,486 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,498 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,499 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,500 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,500 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,501 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,512 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,513 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,514 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,514 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:57,515 - INFO - CSV is missing required columns: id.
+2026-09-04 22:06:58,074 - INFO - Application started.
+2026-09-04 22:06:58,078 - INFO - Loaded 11 employee records.
+2026-09-04 22:06:58,087 - INFO - Employee data filtered.
+2026-09-04 22:06:58,090 - INFO - Department analysis calculated.
+2026-09-04 22:06:58,094 - INFO - Cleaned data created with 10 records.
+2026-09-04 22:06:58,095 - INFO - Employee statistics calculated.
+2026-09-04 22:06:58,095 - INFO - Report generated: summary_report.txt
+2026-09-04 22:06:58,098 - INFO - Department analysis calculated.
+2026-09-04 22:06:58,099 - INFO - Report generated: department_report.txt
+2026-09-04 22:06:58,101 - INFO - Report generated: data_quality_report.txt
+2026-09-04 22:06:58,101 - INFO - All reports generated.
+2026-09-04 22:07:22,315 - INFO - Loaded 11 employee records.
+2026-09-04 22:07:22,316 - INFO - Loaded 11 employee records.
+2026-09-04 22:07:22,330 - INFO - Loaded 11 employee records.
+2026-09-04 22:07:22,331 - INFO - Employee data filtered.
+2026-09-04 22:07:22,332 - INFO - Loaded 11 employee records.
+2026-09-04 22:07:22,335 - INFO - Department analysis calculated.
+2026-09-04 22:07:22,337 - INFO - Loaded 11 employee records.
+2026-09-04 22:07:22,337 - INFO - Employee data sorted by salary.
+2026-09-04 22:07:22,339 - INFO - Loaded 11 employee records.
+2026-09-04 22:07:22,339 - INFO - Employee statistics calculated.
+2026-09-04 22:07:22,564 - INFO - Loaded 11 employee records.
+2026-09-04 22:07:22,574 - INFO - Employee statistics calculated.
+2026-09-04 22:07:22,578 - INFO - Department analysis calculated.
+2026-09-04 22:07:22,580 - INFO - Cleaned data created with 10 records.
+2026-09-04 22:07:22,581 - INFO - Cleaned data created with 10 records.
+2026-09-04 22:07:22,583 - INFO - CSV file not found: C:\Users\mudab\AppData\Local\Temp\csv-check-vto7e33a\x.csv
+2026-09-04 22:07:22,584 - INFO - CSV file not found: C:\Users\mudab\AppData\Local\Temp\csv-check-vto7e33a\x.csv
+2026-09-04 22:07:22,584 - INFO - CSV file not found: C:\Users\mudab\AppData\Local\Temp\csv-check-vto7e33a\x.csv
+2026-09-04 22:07:22,584 - INFO - CSV file not found: C:\Users\mudab\AppData\Local\Temp\csv-check-vto7e33a\x.csv
+2026-09-04 22:07:22,585 - INFO - CSV file not found: C:\Users\mudab\AppData\Local\Temp\csv-check-vto7e33a\x.csv
+2026-09-04 22:07:22,586 - INFO - CSV file is empty.
+2026-09-04 22:07:22,587 - INFO - CSV file is empty.
+2026-09-04 22:07:22,587 - INFO - CSV file is empty.
+2026-09-04 22:07:22,588 - INFO - CSV file is empty.
+2026-09-04 22:07:22,588 - INFO - CSV file is empty.
+2026-09-04 22:07:22,591 - INFO - Invalid CSV: Error tokenizing data. C error: EOF inside string starting at row 2
+2026-09-04 22:07:22,592 - INFO - Invalid CSV: Error tokenizing data. C error: EOF inside string starting at row 2
+2026-09-04 22:07:22,592 - INFO - Invalid CSV: Error tokenizing data. C error: EOF inside string starting at row 2
+2026-09-04 22:07:22,593 - INFO - Invalid CSV: Error tokenizing data. C error: EOF inside string starting at row 2
+2026-09-04 22:07:22,593 - INFO - Invalid CSV: Error tokenizing data. C error: EOF inside string starting at row 2
+2026-09-04 22:07:22,604 - INFO - CSV is missing required columns: id, salary.
+2026-09-04 22:07:22,605 - INFO - CSV is missing required columns: id, salary.
+2026-09-04 22:07:22,606 - INFO - CSV is missing required columns: id, salary.
+2026-09-04 22:07:22,606 - INFO - CSV is missing required columns: id, salary.
+2026-09-04 22:07:22,607 - INFO - CSV is missing required columns: id, salary.
+2026-09-04 22:07:22,612 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:22,614 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:22,614 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:22,617 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:22,617 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:22,622 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:22,623 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:22,623 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:22,624 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:22,625 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:22,628 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:22,629 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:22,630 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:22,631 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:22,631 - INFO - CSV is missing required columns: id.
+2026-09-04 22:07:23,214 - INFO - Application started.
+2026-09-04 22:07:23,216 - INFO - Loaded 11 employee records.
+2026-09-04 22:07:23,223 - INFO - Employee data filtered.
+2026-09-04 22:07:23,224 - INFO - Employee data sorted by salary.
+2026-09-04 22:07:23,225 - INFO - Employee statistics calculated.
+2026-09-04 22:07:23,229 - INFO - Department analysis calculated.
+2026-09-04 22:07:23,233 - INFO - Cleaned data created with 10 records.
+2026-09-04 22:07:23,234 - INFO - Employee statistics calculated.
+2026-09-04 22:07:23,234 - INFO - Report generated: summary_report.txt
+2026-09-04 22:07:23,237 - INFO - Department analysis calculated.
+2026-09-04 22:07:23,238 - INFO - Report generated: department_report.txt
+2026-09-04 22:07:23,240 - INFO - Report generated: data_quality_report.txt
+2026-09-04 22:07:23,240 - INFO - All reports generated.
+2026-09-04 22:07:44,699 - INFO - Loaded 11 employee records.
+2026-09-04 22:07:44,701 - INFO - Loaded 11 employee records.
+2026-09-04 22:07:44,705 - INFO - Loaded 11 employee records.
+2026-09-04 22:07:44,706 - INFO - Employee data filtered.
+2026-09-04 22:07:44,707 - INFO - Loaded 11 employee records.
+2026-09-04 22:07:44,710 - INFO - Department analysis calculated.
+2026-09-04 22:07:44,712 - INFO - Loaded 11 employee records.
+2026-09-04 22:07:44,712 - INFO - Employee data sorted by salary.
+2026-09-04 22:07:44,713 - INFO - Loaded 11 employee records.
+2026-09-04 22:07:44,714 - INFO - Employee statistics calculated.
+2026-09-04 22:07:44,857 - INFO - Loaded 2 employee records.
+2026-09-04 22:07:44,858 - INFO - Loaded 2 employee records.
+2026-09-04 22:07:44,865 - INFO - Loaded 2 employee records.
+2026-09-04 22:07:44,865 - INFO - Employee statistics calculated.
+2026-09-04 22:07:44,866 - INFO - Loaded 2 employee records.
+2026-09-04 22:07:44,870 - INFO - Department analysis calculated.
+2026-09-04 22:07:44,871 - INFO - Loaded 2 employee records.
+2026-09-04 22:07:44,873 - INFO - Cleaned data created with 2 records.
+2026-09-04 22:07:44,884 - INFO - Loaded 1 employee records.
+2026-09-04 22:07:44,885 - INFO - Loaded 1 employee records.
+2026-09-04 22:07:44,889 - INFO - Loaded 1 employee records.
+2026-09-04 22:07:44,890 - INFO - Loaded 1 employee records.
+2026-09-04 22:07:44,893 - INFO - Loaded 1 employee records.
+2026-09-04 22:07:44,904 - INFO - Cleaned data created with 1 records.
+2026-09-04 22:07:44,917 - INFO - Loaded 1 employee records.
+2026-09-04 22:07:44,918 - INFO - Loaded 1 employee records.
+2026-09-04 22:07:44,921 - INFO - Loaded 1 employee records.
+2026-09-04 22:07:44,921 - INFO - Employee statistics calculated.
+2026-09-04 22:07:44,922 - INFO - Loaded 1 employee records.
+2026-09-04 22:07:44,925 - INFO - Department analysis calculated.
+2026-09-04 22:07:44,926 - INFO - Loaded 1 employee records.
+2026-09-04 22:07:44,927 - INFO - Cleaned data created with 1 records.
