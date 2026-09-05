@@ -78,7 +78,8 @@ class EmployeeAnalyzer:
 		data = self._require_data()
 		result = data
 		if department:
-			result = result[result["department"].astype(str).str.casefold() == department.casefold()]
+			department = department.strip().casefold()
+			result = result[result["department"].astype(str).str.casefold() == department]
 		for column, value, operator in (("salary", salary_gt, ">"), ("salary", salary_lt, "<"),
 										("age", age_gt, ">"), ("age", age_lt, "<")):
 			if value is not None:
