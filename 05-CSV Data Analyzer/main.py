@@ -1,3 +1,5 @@
+import math
+
 from analyzer import EmployeeAnalyzer
 from logger import log
 from report import ReportGenerator
@@ -25,7 +27,17 @@ def print_frame(frame) -> None:
 
 def numeric_input(prompt: str) -> float | None:
 	value = input(prompt).strip()
-	return None if not value else float(value)
+	if not value:
+		return None
+	try:
+		result = float(value)
+	except ValueError:
+		print("Please enter a valid number or leave the field blank.")
+		return None
+	if not math.isfinite(result):
+		print("Please enter a finite number or leave the field blank.")
+		return None
+	return result
 
 
 def main() -> None:
