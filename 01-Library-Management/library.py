@@ -137,8 +137,10 @@ class Library:
                 self.books = []
 
                 for item in data:
-
-                    self.books.append(Book.from_dict(item))
+                    try:
+                        self.books.append(Book.from_dict(item))
+                    except (KeyError, TypeError):
+                        continue
 
         except (FileNotFoundError, json.JSONDecodeError):
             self.books = []
@@ -172,8 +174,10 @@ class Library:
                 self.students = []
 
                 for item in data:
-
-                    self.students.append(Student.from_dict(item))
+                    try:
+                        self.students.append(Student.from_dict(item))
+                    except (KeyError, TypeError):
+                        continue
 
         except (FileNotFoundError, json.JSONDecodeError):
             self.students = []
