@@ -21,7 +21,7 @@ class Student:
             data["name"],
             data["phone"]
         )
-        student.borrowed_books = data["borrowed_books"]
+        student.borrowed_books = data.get("borrowed_books", [])
         return student
 
     def display(self):
@@ -31,10 +31,3 @@ class Student:
         print(f"Phone      : {self.phone}")
         print(f"Borrowed   : {self.borrowed_books}")
 
-    def to_dict(self):
-        return {
-        "student_id": self.student_id,
-        "name": self.name,
-        "phone": self.phone,
-        "borrowed_books": self.borrowed_books
-    }

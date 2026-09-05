@@ -138,16 +138,7 @@ class Library:
 
                 for item in data:
 
-                    book = Book(
-                        item["book_id"],
-                        item["title"],
-                        item["author"],
-                        item["category"]
-                    )
-
-                    book.available = item["available"]
-
-                    self.books.append(book)
+                    self.books.append(Book.from_dict(item))
 
         except (FileNotFoundError, json.JSONDecodeError):
             self.books = []
@@ -182,15 +173,7 @@ class Library:
 
                 for item in data:
 
-                    student = Student(
-                        item["student_id"],
-                        item["name"],
-                        item["phone"]
-                    )
-
-                    student.borrowed_books = item["borrowed_books"]
-
-                    self.students.append(student)
+                    self.students.append(Student.from_dict(item))
 
         except (FileNotFoundError, json.JSONDecodeError):
             self.students = []

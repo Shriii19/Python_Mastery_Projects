@@ -24,7 +24,7 @@ class Book:
             data["author"],
             data["category"]
         )
-        book.available = data["available"]
+        book.available = data.get("available", True)
         return book
 
     def display(self):
@@ -35,11 +35,3 @@ class Book:
         print(f"Category  : {self.category}")
         print(f"Available : {self.available}")
 
-    def to_dict(self):
-        return {
-            "book_id": self.book_id,
-            "title": self.title,
-            "author": self.author,
-            "category": self.category,
-            "available": self.available
-        }
