@@ -89,6 +89,7 @@ class EmployeeAnalyzer:
 		return result.copy()
 
 	def sort_data(self, column: str, ascending: bool = True) -> pd.DataFrame:
+		column = column.strip().casefold()
 		if column not in {"name", "age", "salary", "department"}:
 			raise ValueError("Sort column must be name, age, salary, or department.")
 		result = self._require_data().sort_values(column, ascending=ascending, na_position="last")
