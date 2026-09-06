@@ -39,6 +39,17 @@ class EmployeeAnalyzer:
 		if data.empty:
 			raise ValueError("CSV contains no employee records.")
 
+		invalid_numeric_columns = []
+		for column in ("age", "salary"):
+			converted = pd.to_numeric(data[column], errors="coerce")
+			if data[column].notna().ne(converted.notna()).any():
+				invalid_numeric_columns.append(column)
+		if invalid_numeric_columns:
+			message = ("CSV contains nonnumeric values in: "
+					   f"{', '.join(invalid_numeric_columns)}.")
+			log(message)
+			raise ValueError(message)
+
 		self.data = data[REQUIRED_COLUMNS].copy()
 		log(f"Loaded {len(self.data)} employee records.")
 		return self.data
