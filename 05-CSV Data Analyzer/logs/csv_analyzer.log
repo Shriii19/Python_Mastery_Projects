@@ -386,3 +386,18 @@
 2026-09-05 22:46:25,567 - INFO - Employee data sorted by salary.
 2026-09-05 22:46:25,571 - INFO - Loaded 11 employee records.
 2026-09-05 22:46:25,572 - INFO - Employee statistics calculated.
+2026-09-06 21:37:29,118 - INFO - CSV is missing required columns: id.
+2026-09-06 21:37:33,857 - INFO - Loaded 2 employee records.
+2026-09-06 21:37:57,219 - INFO - Loaded 11 employee records.
+2026-09-06 21:37:57,221 - INFO - Loaded 11 employee records.
+2026-09-06 21:37:57,230 - INFO - Loaded 11 employee records.
+2026-09-06 21:37:57,231 - INFO - Employee data filtered.
+2026-09-06 21:37:57,232 - INFO - Loaded 11 employee records.
+2026-09-06 21:37:57,240 - INFO - Department analysis calculated.
+2026-09-06 21:37:57,242 - INFO - Loaded 11 employee records.
+2026-09-06 21:37:57,243 - INFO - Employee data sorted by salary.
+2026-09-06 21:37:57,244 - INFO - Loaded 11 employee records.
+2026-09-06 21:37:57,245 - INFO - Employee statistics calculated.
+2026-09-06 21:37:57,959 - INFO - CSV contains nonnumeric values in: age, salary.
+2026-09-06 21:37:57,974 - INFO - Loaded 2 employee records.
+2026-09-06 21:37:57,993 - INFO - Loaded 1 employee records.
