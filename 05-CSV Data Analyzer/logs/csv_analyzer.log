@@ -401,3 +401,13 @@
 2026-09-06 21:37:57,959 - INFO - CSV contains nonnumeric values in: age, salary.
 2026-09-06 21:37:57,974 - INFO - Loaded 2 employee records.
 2026-09-06 21:37:57,993 - INFO - Loaded 1 employee records.
+2026-09-07 22:57:41,316 - INFO - Loaded 11 employee records.
+2026-09-07 22:57:41,322 - INFO - Loaded 11 employee records.
+2026-09-07 22:57:41,330 - INFO - Loaded 11 employee records.
+2026-09-07 22:57:41,331 - INFO - Employee data filtered.
+2026-09-07 22:57:41,336 - INFO - Loaded 11 employee records.
+2026-09-07 22:57:41,339 - INFO - Department analysis calculated.
+2026-09-07 22:57:41,346 - INFO - Loaded 11 employee records.
+2026-09-07 22:57:41,346 - INFO - Employee data sorted by salary.
+2026-09-07 22:57:41,350 - INFO - Loaded 11 employee records.
+2026-09-07 22:57:41,351 - INFO - Employee statistics calculated.
