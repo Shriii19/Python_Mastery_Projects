@@ -4,6 +4,17 @@ A structured collection of Python projects created while mastering Python from b
 
 The goal is not just to learn Python syntax but to build real-world software using clean architecture and software engineering practices.
 
+## ✅ Repository Testing
+
+Use the repo-level runner to validate each project in the same environment:
+
+```bash
+python -m pip install -r requirements.txt
+python run_all_tests.py
+```
+
+This executes the test suites for the project folders that contain tests and reports any failures without requiring a separate virtual environment setup for each app.
+
 ---
 
 # 🎯 Learning Goal
