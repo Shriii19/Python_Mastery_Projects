@@ -1,0 +1,19 @@
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Logs and generated output
+logs/*.log
+**/logs/*.log
+
+# Editor metadata
+.vscode/
+.DS_Store
