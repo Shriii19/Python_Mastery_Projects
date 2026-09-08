@@ -85,9 +85,6 @@ python -m unittest discover -s tests -v
 3. Add more reusable command-line arguments while preserving the interactive menu.
 4. Expand validation for numeric ranges and duplicate IDs.
 
-## Learning Outcomes
-
-You will be able to build a small, maintainable Pandas application; reason about data quality; produce repeatable reports; and test analysis behavior independently from user interaction.
 
 ## Future Improvements and Project Status
 
